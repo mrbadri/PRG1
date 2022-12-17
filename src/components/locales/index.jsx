@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
+
 // custom
 import loadMessages from "@/utils/locales/loadMessage";
 import useLocale from "@/hooks/locales/useLocale";
@@ -9,18 +10,19 @@ const Locales = ({ children }) => {
     const [locale] = useLocale();
 
     useEffect(() => {
-        loadMessages(locale).then((message) => setMessage(message));
+        loadMessages(locale).then((result) => {
+            setMessage(result.default);
+        });
     }, [locale]);
 
-    return (
-        <>
-            {message && (
-                <IntlProvider locale={locale} messages={message}>
-                    {children}
-                </IntlProvider>
-            )}
-        </>
-    );
+    if (message)
+        return (
+            <IntlProvider locale={locale} messages={message}>
+                {children}
+            </IntlProvider>
+        );
+
+    return <></>;
 };
 
 export default Locales;

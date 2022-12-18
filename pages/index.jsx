@@ -1,7 +1,7 @@
 import { FormattedMessage } from "react-intl";
-import Landing from "@/src/components/landing";
 import useLocale from "@/src/hooks/locales/useLocale";
 import useConfig from "/src/hooks/config/useConfig";
+import Button from "components/button";
 
 function Home() {
     const { locale, onChangeLocale } = useConfig();
@@ -18,6 +18,8 @@ function Home() {
                 >
                     Change Locale
                 </button>
+
+                <Button type="primary">Action</Button>
                 <h1>
                     <FormattedMessage id="tic-tac-toe" />
                 </h1>
@@ -26,7 +28,8 @@ function Home() {
                 </p>
             </div>
 
-            <Landing />
+           
+
         </>
     );
 }

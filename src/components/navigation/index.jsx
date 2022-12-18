@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from '@/public/assets/images/logo.svg'
 import Image from "next/image";
+import CustomButton from "components/button/index";
 
 const routes = [
     {name: 'Home',route:'/'},
@@ -8,8 +9,8 @@ const routes = [
 ]
 
 const Navigation = () => {
-    console.log('Navigation')
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+
     return (
       <>
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
@@ -49,7 +50,7 @@ const Navigation = () => {
                 ))}
               </ul>
               <button>my accunt</button>
-
+              <CustomButton Icon={<>Icon</>}>My Account</CustomButton>
             </div>
           </div>
         </nav>

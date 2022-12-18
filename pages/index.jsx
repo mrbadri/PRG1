@@ -1,10 +1,23 @@
 import { FormattedMessage } from "react-intl";
-import Landing from "../src/components/landing";
+import Landing from "@/src/components/landing";
+import useLocale from "@/src/hooks/locales/useLocale";
+import useConfig from "/src/hooks/config/useConfig";
 
-export default function Home() {
+function Home() {
+    const { locale, onChangeLocale } = useConfig();
+    console.log("locale in page:", locale);
+
     return (
         <>
-            <div className="center flex-col h-screen w-screen max-w-screen">
+            <div className="center flex-col max-w-screen">
+                <button
+                    className="bg-red-600 p-2 text-red-50 rounded-sm mb-2"
+                    onClick={() => {
+                        onChangeLocale("fa");
+                    }}
+                >
+                    Change Locale
+                </button>
                 <h1>
                     <FormattedMessage id="tic-tac-toe" />
                 </h1>
@@ -17,3 +30,7 @@ export default function Home() {
         </>
     );
 }
+
+Home.typeLayout = "Main";
+
+export default Home;

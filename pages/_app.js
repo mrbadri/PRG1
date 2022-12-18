@@ -1,9 +1,13 @@
 import "@/src/styles/globals.scss";
-import Locales from "@/src/components/locales";
-import Layout from "@/src/layout";
+
 import DirectionProvider from "@/src/components/direction";
+import Locales from "@/src/components/locales";
+import handleLayout from "@/src/layout";
 
 function MyApp({ Component, pageProps }) {
+    // Handle layout
+    const Layout = handleLayout(Component?.typeLayout);
+
     return (
         <DirectionProvider>
             <Locales>

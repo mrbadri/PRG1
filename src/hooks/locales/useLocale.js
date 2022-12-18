@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import getInitialLocale from "@/src/utils/locales/getInitialLocale";
 
 const useLocale = (initialLocale = getInitialLocale()) => {
     const [locale, setLocale] = useState(initialLocale);
 
-    if (typeof window !== "undefined") localStorage.setItem("locale", locale);
+    useEffect(() => {
+        if (typeof window !== "undefined") localStorage.setItem("locale", locale);
+    }, [locale]);
 
-    return [locale, setLocale];
+    return { locale, setLocale };
 };
 
 export default useLocale;

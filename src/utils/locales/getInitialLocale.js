@@ -2,9 +2,9 @@ import LOCALES from "@/src/constant/locales";
 
 const getInitialLocale = () => {
     if (typeof window !== "undefined") {
-        const localeSaved = localStorage.getItem("locale");
+        const config = localStorage.getItem("'config'");
 
-        if (localeSaved) {
+        if (config?.locale) {
             // use locale saved
             return localeSaved;
         } else {

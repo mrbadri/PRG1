@@ -3,5 +3,6 @@
         "Kdam",
         "tailwindcss",
         "بازی"
-    ]
+    ],
+    "dotenv.enableAutocloaking": false
 }

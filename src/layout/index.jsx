@@ -1,5 +1,14 @@
-const Layout = ({ children }) => {
-    return <div className="font-Kdam">{children}</div>;
+import MainLayout from "./main";
+import AuthLayout from "./auth";
+
+const handler = {
+    Auth: AuthLayout,
+    Main: MainLayout
 };
 
-export default Layout;
+const handleLayout = (type) => {
+    if (handler?.[type]) return handler?.[type];
+    return MainLayout;
+};
+
+export default handleLayout;

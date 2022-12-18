@@ -11,6 +11,7 @@
         "components/*": ["/components/*"],
         "pages/*": ["/pages/*"],
         "hoc/*": ["/hoc/*"],
+        "const/*": ["/constant/*"],
         "layouts": ["/layouts/index"],
         "hooks": ["/hooks/index"],
         "utils": ["/utils/index"],

@@ -1,11 +1,7 @@
 import React from "react";
 import Logo from '@/public/assets/images/logo.svg'
 import Image from "next/image";
-
-const routes = [
-    {name: 'Home',route:'/'},
-    {name: 'Home',route:'/'},
-]
+import Routes from 'const/routes'
 
 const Navigation = () => {
     console.log('Navigation')
@@ -37,13 +33,13 @@ const Navigation = () => {
               id="example-navbar-danger"
             >
               <ul className="flex flex-col lg:flex-row list-none lg:mx-auto">
-                {routes.map(item => (
+                {Routes.map(item => (
                     <li className="nav-item">
                   <a
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark hover:opacity-75"
                     href={item.route}
                   >
-                    <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2">{item.name}</span>
+                    <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2">{item.label}</span>
                   </a>
                 </li>
                 ))}

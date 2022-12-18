@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "./src",
+      "paths": {
+        "controller/*": ["/controller/*"],
+        "reducers/*": ["/controller/reducers/*"],
+        "actions/*": ["/controller/actions/*"],
+        "components/*": ["/components/*"],
+        "pages/*": ["/pages/*"],
+        "hoc/*": ["/hoc/*"],
+        "layouts": ["/layouts/index"],
+        "hooks": ["/hooks/index"],
+        "utils": ["/utils/index"],
+        "routes": ["/routes/index"]
+      }
+    }
+  }
+  

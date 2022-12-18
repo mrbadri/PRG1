@@ -9,7 +9,7 @@ function Home() {
 
     return (
         <>
-            <div className="center flex-col h-screen w-screen max-w-screen">
+            <div className="center flex-col max-w-screen">
                 <button
                     className="bg-red-600 p-2 text-red-50 rounded-sm mb-2"
                     onClick={() => {

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Routes from 'const/routes'
 
 const Navigation = () => {
-    console.log('Navigation')
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+
     return (
       <>
         <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
@@ -45,7 +45,7 @@ const Navigation = () => {
                 ))}
               </ul>
               <button>my accunt</button>
-
+              <CustomButton Icon={<>Icon</>}>My Account</CustomButton>
             </div>
           </div>
         </nav>

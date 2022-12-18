@@ -11,12 +11,13 @@ module.exports = {
                 Kdam: ["Kdam", "sans-serif"]
             },
             colors: {
+                // TODO: Please check the palette with figma
                 primary: {
                     100: "#E5E2FC",
                     200: "#CCC6F9",
                     300: "#ADA5EF",
                     400: "#9289DF",
-                    500: "#6C62CA",
+                    500: "#4CB1FF",
                     600: "#5047AD",
                     700: "#383191",
                     800: "#241F75",

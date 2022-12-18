@@ -1,9 +1,11 @@
-const Button = ({ children, className, color, ...params }) => {
+import { Button } from "antd";
+
+const CustomButton = ({ children, className, color = "primary", ...params }) => {
     return (
-        <button className={`${className}`} {...params}>
+        <Button className={`${className} bg-${color}-500 rounded-sm`} {...params}>
             {children}
-        </button>
+        </Button>
     );
 };
 
-export default Button;
+export default CustomButton;

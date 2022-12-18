@@ -2,7 +2,7 @@ import React from "react";
 import Logo from '@/public/assets/images/logo.svg'
 import Image from "next/image";
 import Routes from 'const/routes'
-
+import CustomButton from 'components/button'
 const Navigation = () => {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
 
@@ -34,18 +34,17 @@ const Navigation = () => {
             >
               <ul className="flex flex-col lg:flex-row list-none lg:mx-auto">
                 {Routes.map(item => (
-                    <li className="nav-item">
+                    <li className="nav-item group/nav" key={item.name}>
                   <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark hover:opacity-75"
+                    className="pt-3 py-2 flex items-center text-xs first-letter:uppercase leading-snug text-dark hover:opacity-75"
                     href={item.route}
                   >
-                    <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i><span className="ml-2">{item.label}</span>
+                    <span className="group-hover/nav:border-b-2 group-hover/nav:border-primary-500 group-hover/nav:text-primary-500 border-b-2 border-transparent" >{item.label}</span>
                   </a>
                 </li>
                 ))}
               </ul>
-              <button>my accunt</button>
-              <CustomButton Icon={<>Icon</>}>My Account</CustomButton>
+              <CustomButton className='shadow-md shadow-info-300 border-none' icon={<>Icon</>}><span className="text-white">My Account</span></CustomButton>
             </div>
           </div>
         </nav>

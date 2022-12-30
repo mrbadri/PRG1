@@ -11,7 +11,6 @@ const Locales = ({ children }) => {
     const { locale } = useLocale();
     const config = useConfig();
 
-    console.log("locale:", locale);
 
     useEffect(() => {
         loadMessages(locale).then((result) => {

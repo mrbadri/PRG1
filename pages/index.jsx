@@ -1,11 +1,9 @@
 import { FormattedMessage } from "react-intl";
-import useLocale from "@/src/hooks/locales/useLocale";
 import useConfig from "/src/hooks/config/useConfig";
 import Button from "components/button";
 
 function Home() {
     const { locale, onChangeLocale } = useConfig();
-    console.log("locale in page:", locale);
 
     return (
         <>
@@ -27,9 +25,6 @@ function Home() {
                     <FormattedMessage id="lorem" />
                 </p>
             </div>
-
-           
-
         </>
     );
 }

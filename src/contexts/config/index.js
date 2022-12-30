@@ -37,7 +37,6 @@ function ConfigProvider({ children }) {
 
     useEffect(() => {
         setConfig(config);
-        console.log("Here");
     }, []);
 
     return (
